@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets – PerrosLABX</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('images/fond5.jpg') no-repeat center center/cover;
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Assombrissement pour contraste */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: brightness(0.7) contrast(1.2);
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 30px;
+      background: rgba(0, 0, 0, 0.6);
+      border-bottom: 2px solid #00aaff;
+      animation: fadeInDown 1.5s ease-out;
+    }
+
+    header h1 {
+      font-size: 2.7em;
+      color: #00aaff;
+      text-shadow: 0 0 20px #00aaff;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #ddd;
+    }
+
+    .timeline {
+      max-width: 900px;
+      margin: 80px auto;
+      position: relative;
+      padding: 20px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, #00aaff, transparent);
+      transform: translateX(-50%);
+      animation: pulseLine 4s infinite alternate;
+    }
+
+    .timeline-item {
+      padding: 20px 40px;
+      position: relative;
+      width: 50%;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: slideUp 1s forwards;
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      animation-delay: 0.3s;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      animation-delay: 0.6s;
+    }
+
+    .timeline-content {
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px solid #00aaff;
+      border-radius: 12px;
+      padding: 25px;
+      position: relative;
+      box-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(0, 170, 255, 0.7);
+    }
+
+    .timeline-content h2 {
+      color: #00aaff;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .timeline-content p {
+      color: #eee;
+      font-size: 1em;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      top: 35px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #00aaff;
+      box-shadow: 0 0 20px #00aaff;
+      animation: pulseDot 2s infinite;
+    }
+
+    .timeline-item:nth-child(odd)::after {
+      right: -10px;
+    }
+
+    .timeline-item:nth-child(even)::after {
+      left: -10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.8);
+      font-size: 0.9em;
+      border-top: 1px solid #00aaff;
+      color: #bbb;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulseLine {
+      from { opacity: 0.7; }
+      to { opacity: 1; }
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { box-shadow: 0 0 15px #00aaff; transform: scale(1); }
+      50% { box-shadow: 0 0 30px #00aaff; transform: scale(1.2); }
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline::before {
+        left: 8px;
+      }
+      .timeline-item {
+        width: 100%;
+        padding-left: 35px;
+      }
+      .timeline-item:nth-child(even) {
+        left: 0;
+      }
+      .timeline-item::after {
+        left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mon Évolution Professionnelle</h1>
+    <p>2024 → 2026 • De la découverte à la maîtrise</p>
+  </header>
+
+  <section class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h2>2024 — Les Fondations</h2>
+        <p>Découverte des <strong>bases réseau</strong> et de <strong>Linux</strong>.  
+        Première année universitaire à l’Université de Yaoundé I.  
+        Expérimentation, scripts Bash, configuration réseau et premières notions de cybersécurité.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h2>2025 — Consolidation et Orientation</h2>
+        <p>Deuxième année universitaire : approfondissement des protocoles réseau et de la sécurité Windows.  
+        Mise en place du parcours professionnel : <strong>formation CCNA</strong>, début de la <strong>cybersécurité offensive</strong> et 
+        apprentissage intensif de l’<strong>anglais technique</strong>.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h2>2026 — Validation et Reconnaissance</h2>
+        <p>Obtention des certifications <strong>CCNA</strong>, <strong>Security+</strong>, <strong>Pentest+</strong>, <strong>CEH</strong>, <strong>OSCP</strong> et <strong>OSCE³</strong>.  
+        Réalisation de projets concrets : <strong>Docker</strong>, <strong>clusters LAN</strong> et <strong>tests d’intrusion</strong>.  
+        Partage des connaissances sur <strong>PerrosLABX</strong> pour former une nouvelle génération d’experts.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 PerrosLABX – Tous droits réservés.
+  </footer>
+
+</body>
+</html>

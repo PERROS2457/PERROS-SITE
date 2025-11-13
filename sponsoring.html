@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sponsoring – PerrosLABX</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('images/fond4.jpg') no-repeat center center/cover;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Assombrir pour un meilleur contraste */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: brightness(0.8) contrast(1.1);
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      border-bottom: 2px solid #00aaff;
+      background: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #00aaff;
+      text-shadow: 0 0 20px #00aaff;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #ddd;
+      margin-top: 10px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+
+    .sponsor-box {
+      max-width: 850px;
+      background: rgba(0, 0, 0, 0.85);
+      border: 1px solid #00aaff;
+      border-radius: 14px;
+      box-shadow: 0 0 30px rgba(0, 170, 255, 0.4);
+      padding: 40px;
+      text-align: center;
+      animation: fadeIn 1.3s ease-out;
+    }
+
+    .sponsor-box h2 {
+      color: #00aaff;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px #00aaff;
+    }
+
+    .sponsor-box p {
+      color: #ddd;
+      line-height: 1.7;
+      font-size: 1.1em;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #00aaff;
+      color: #fff;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px #00aaff;
+    }
+
+    .btn:hover {
+      background: #0088cc;
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #00aaff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.85);
+      border-top: 1px solid #00aaff;
+      font-size: 0.9em;
+      color: #bbb;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media screen and (max-width: 768px) {
+      .sponsor-box {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Devenir Sponsor</h1>
+    <p>Collaborons ensemble dans une vision gagnant-gagnant</p>
+  </header>
+
+  <main>
+    <div class="sponsor-box">
+      <h2>Pourquoi devenir sponsor de PerrosLABX ?</h2>
+      <p>
+        En me sponsorisant, vous soutenez un projet centré sur la <strong>cybersécurité, le réseau et l’innovation</strong>.  
+        En contrepartie, je m’engage à <strong>collaborer selon les termes d’un contrat clair</strong> :  
+        accompagnement technique, développement de solutions, promotion ou contribution à des projets liés à votre entreprise.  
+        <br><br>
+        Chaque partenariat est une alliance basée sur la <strong>valeur, la transparence</strong> et un objectif commun :  
+        bâtir un écosystème technologique solide et durable.
+      </p>
+
+      <a href="contact.html" class="btn">Me contacter</a>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 PerrosLABX — Tous droits réservés.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos | PerrosLABX</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      color: #e0e0e0;
+      background: #0d1117;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+    }
+
+    header a {
+      color: #00ffff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    header a:hover {
+      color: #66ffff;
+    }
+
+    /* === HERO SECTION === */
+    .hero {
+      position: relative;
+      background: url('4.jpg') center/cover no-repeat;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      color: #fff;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6); /* filtre sombre */
+      backdrop-filter: brightness(0.7);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hero-content h1 {
+      font-size: 2.4rem;
+      color: #00ffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-content p {
+      line-height: 1.7;
+      font-size: 1rem;
+      color: #eaeaea;
+      margin-bottom: 1rem;
+    }
+
+    .philosophy {
+      font-style: italic;
+      font-weight: 500;
+      color: #00ffff;
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #000;
+      color: #888;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">Accueil</a>
+    <a href="about.html" class="active">À propos</a>
+    <a href="projects.html">Projets</a>
+    <a href="sponsoring.html">Sponsoring</a>
+    <a href="contact.html">Contact</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>À propos de moi</h1>
+      <p><strong>Kengnang Tonfack Perros</strong>, un jeune ingénieur en devenir, passionné d'informatique, de réseaux et de cybersécurité. Actuellement étudiant en deuxième année d'informatique à l'Université de Yaoundé I, je combine rigueur académique et apprentissage autodidacte intensif pour devenir un expert complet en cybersécurité offensive et défensive.</p>
+
+      <p>Doté d'une curiosité insatiable, j'explore sans relâche les domaines du réseautage (CCNA), de la cybersécurité offensive (COMPTIA Pentest+, CEH, OSCP, OSCE³) et du déploiement d'infrastructures distribuées (Docker, cluster LAN).</p>
+
+      <p>Mon approche mêle recherche, expérimentation et innovation, avec une vision claire : bâtir des systèmes résilients, performants et sécurisés.</p>
+
+      <p>Toujours animé par le désir de transmettre, je partage mes projets, mes découvertes et mes analyses sur ma chaîne <strong>PerrosLABX</strong>, dédiée à la vulgarisation technique, à l'apprentissage par la pratique et à la formation d'une nouvelle génération d'experts.</p>
+
+      <p>Sur le plan personnel, je me distingue par une discipline exemplaire : routines d'étude intensives, objectif de 7 certifications (CCNA, Security+, Pentest+, CEH, OSCP, OSCE³), et une mentalité de hacker éthique tournée vers la résolution de problèmes réels et la sécurité des systèmes critiques.</p>
+
+      <p class="philosophy">« Comprendre, expérimenter, sécuriser — et partager le savoir. »</p>
+    </div>
+  </section>
+
+  <footer>© <span id="year"></span> PerrosLABX — Bâtir, protéger, innover.</footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
